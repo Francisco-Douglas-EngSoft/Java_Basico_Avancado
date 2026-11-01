@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: #eef2ff;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
+}
+
+.cartao {
+    width: min(100%, 520px);
+    padding: 32px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px #1e3a8a1a;
+}
+
+h1 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+input,
+button {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+button {
+    border: 0;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.explicacao {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+a {
+    color: #1d4ed8;
+}
