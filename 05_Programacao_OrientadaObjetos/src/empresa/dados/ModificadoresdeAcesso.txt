@@ -1,0 +1,50 @@
+MODIFICADORES DE ACESSO EM JAVA
+
+Modificadores de acesso controlam de onde uma classe, atributo, construtor ou
+metodo pode ser acessado. Eles ajudam a proteger os dados e a definir quais
+partes de uma classe fazem parte de sua interface publica.
+
+1. public
+Pode ser acessado de qualquer classe, desde que a classe que o declara tambem
+esteja acessivel.
+
+2. private
+So pode ser acessado dentro da propria classe. E usado para esconder os detalhes
+internos e proteger os atributos. Outras classes podem interagir com esses
+dados por meio de metodos publicos, como getters e setters, quando apropriado.
+
+3. protected
+Pode ser acessado por classes do mesmo pacote e por subclasses, inclusive
+subclasses em outros pacotes. Fora do pacote, o acesso ocorre por heranca e
+segue as regras de acesso de membros protected.
+
+4. Acesso de pacote (package-private)
+Quando nenhum modificador e escrito, o membro pode ser acessado somente por
+classes do mesmo pacote. "default" e um nome comum para esse comportamento,
+mas nao existe uma palavra-chave default para declarar esse acesso.
+
+Resumo:
+
+Modificador       Mesma classe   Mesmo pacote   Subclasse em outro pacote   Outros pacotes
+public            Sim            Sim            Sim                        Sim
+protected         Sim            Sim            Sim                        Nao
+sem modificador   Sim            Sim            Nao                        Nao
+private           Sim            Nao            Nao                        Nao
+
+Observacao sobre classes:
+Uma classe de nivel superior (declarada diretamente no arquivo) pode ser
+public ou ter acesso de pacote. Ela nao pode ser private nem protected.
+
+Exemplo relacionado a este projeto:
+Funcionarios e FolhaPagamentos estao no pacote empresa.dados. Por isso,
+FolhaPagamentos consegue acessar nome e salario enquanto esses atributos nao
+tiverem modificador, pois o acesso de pacote permite o uso entre classes do
+mesmo pacote. Se os atributos forem private, FolhaPagamentos nao podera
+acessa-los diretamente; a classe Funcionarios devera oferecer metodos publicos
+para consultar os valores, por exemplo getters.
+
+Convencao recomendada:
+Em geral, mantenha atributos private e exponha somente as operacoes necessarias
+por meio de metodos publicos. Isso e encapsulamento. Use protected quando
+subclasses precisarem acessar um membro; use public para a interface que outras
+classes devem poder utilizar.
