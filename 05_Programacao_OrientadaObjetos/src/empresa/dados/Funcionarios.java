@@ -1,5 +1,3 @@
-package empresa.dados;
-
 public class Funcionarios {
     public String nome;
     double salario;
